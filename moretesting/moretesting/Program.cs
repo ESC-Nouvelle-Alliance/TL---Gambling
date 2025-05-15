@@ -13,7 +13,7 @@ class GamesManager
     public static void MoneyDisplay()
     {
         int WindowWidth = Console.WindowWidth;
-        Console.SetCursorPosition(WindowWidth - 15, 0);
+        Console.SetCursorPosition(WindowWidth - 20, 0);
         Console.WriteLine($"Balance: {Money}$");
         Console.SetCursorPosition(0, 0);
     }
@@ -64,7 +64,7 @@ class GamesManager
         public static void InputMoneyDisplay()
         {
             int WindowWidth = Console.WindowWidth;
-            Console.SetCursorPosition(WindowWidth - 35, 0);
+            Console.SetCursorPosition(WindowWidth - 40, 0);
             Console.WriteLine($"Bet: {InputMoney}$");
             GamesManager.MoneyDisplay();
         }
@@ -451,7 +451,6 @@ class GamesManager
 
             //Round one red or black
             Zero();
-            Console.Write(CardOneColour);
             Console.WriteLine("Guess the colour of the card (red or black).");
             ColourOneGuess = getVar(12, ColourOneGuess, "red", "black", "red", "black", 0);
 
@@ -467,7 +466,6 @@ class GamesManager
 
 
             //Round two higher or lower
-            Console.Write(CardTwo);
             Console.Write("Please chose higher or lower.");
             HighLowGuess = getVar(Consolewidth + 12, HighLowGuess, "higher", "lower", "higher", "lower", 1);
             gameUI(2);
@@ -484,7 +482,6 @@ class GamesManager
 
 
             //Round three inside or outside
-            Console.Write(CardThree);
             Console.WriteLine("Please chose inside or outside.");
             InOutGuess = getVar(Consolewidth * 2 + 12, InOutGuess, "inside", "outside", "inside", "outside", 2);
             gameUI(3);
@@ -504,7 +501,6 @@ class GamesManager
 
 
             //Round four guess the suit
-            Console.Write(CardFourSuit);
             Console.WriteLine("Please guess the suit (hearts, clubs, diamonds, spades)");
             SuitsGuess = getVar(Consolewidth * 3 + 12, SuitsGuess, "hearts", "clubs", "diamonds", "spades", 3);
             gameUI(4);
